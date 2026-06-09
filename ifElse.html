@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Ternary Operator</h1>
+<p id="demo"></p>
+
+<input type="number" id="score" placeholder="Enter score">
+<button onclick="checkGrade()">Check Grade</button>
+
+<p id="result"></p>
+
+<script>
+function checkGrade(){
+let score= document.getElementById("score").value;
+let grade ;
+if (score > 90){
+grade="Grade A"
+}
+else if (score > 80){
+grade="Grade B"
+}
+else if (score > 70){
+grade="Grade C"
+}
+
+else if (score > 60){
+grade="Grade D"
+}
+
+else {
+    grade="Fail F"
+}
+document.getElementById("result").innerText=`score :${score}, grade: ${grade} ` ;
+
+
+}
+</script>  
+</body>
+</html>
+
+
+

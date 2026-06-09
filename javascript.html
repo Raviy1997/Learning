@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+</style>
+<body>
+<div class="increment">4</div>
+<script> 
+let increment = document.querySelectorAll(".increment");
+for (i=10; i< increment.length; i++) {
+  console.log(increment[i].textContent);
+}
+
+let newArray =[1,2,3,4,5,6,7]
+// newArray.shift(6);
+// console.log(newArray);
+// newArray.pop()
+// console.log(newArray.includes(6));
+
+let spliceArray = newArray.slice(1,2);
+console.log(spliceArray);
+
+</script> 
+
+
+<div class="scoreList"></div>
+
+<script>
+let scoreList = [
+  { name: "Ravi", score: 87, subject: "baseball" },
+  { name: "Ravi", score: 87, subject: "baseball" },
+  { name: "Ravi", score: 87, subject: "baseball" },
+  { name: "Ravi", score: 87, subject: "baseball" }
+];
+
+let newScore = document.getElementsByClassName("scoreList")[0];
+
+scoreList.forEach(item => {
+  let li = document.createElement('li');
+
+  li.innerHTML = ` Name: ${item.name} <br>   Score: ${item.score} <br>  Subject: ${item.subject} `;
+
+  newScore.appendChild(li);
+});
+</script>
+
+</div>
+
+<script>
+
+function arrayTerm (Num1 , Num2){
+console.log(Num1 + Num2);
+}
+arrayTerm(5,9);
+
+
+</script>
+<div id="termArray"> </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
