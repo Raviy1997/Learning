@@ -7,7 +7,11 @@
 <input type="number" id="score" placeholder="Enter score">
 <button onclick="checkGrade()">Check Grade</button>
 
+<button onclick="marksFunction()">Check Grade</button>
+
 <p id="result"></p>
+
+<p id="marksResult"></p>
 
 <script>
 function checkGrade(){
@@ -18,7 +22,7 @@ grade="Grade A"
 }
 else if (score > 80){
 grade="Grade B"
-} 
+}
 else if (score > 70){
 grade="Grade C"
 }
@@ -35,8 +39,49 @@ document.getElementById("result").innerText=`score :${score}, grade: ${grade} ` 
 
 }
 </script>  
+
+
+
+<script>
+let marks = document.getElementById("score").value;
+let text = "enter the value";
+function marksFunction(){
+ let  scoreMarks = marks > 90 ? "grade A" : marks > 80 ? "grade B" : marks > 70 ? "grade C": marks > 60 ? "grade D" : "fail";
+
+document.getElementById("marksResult").innerText=`marks grade ${scoreMarks}`;
+}
+
+
+
+
+</script>    
+
+
+<input type="number" id="table" placeholder="Enter score">
+
+
+<script>
+let table = prompt("enter the value");
+ for (let i = 1; i <= 10; i++) {
+        console.log(`${table} * ${i} = ${table * i}`);
+    }
+</script>
+
+
+<script>
+let text1 ="";
+let i =0;
+
+while(i < 10){
+    text1=`${text1}  value ${i} <br>` ;
+    i++;
+}
+document.write(text1);
+
+</script>    
+
 </body>
-</html>
+</html> 
 
 
 
