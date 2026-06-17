@@ -13,6 +13,7 @@
 
 <p id="marksResult"></p>
 
+
 <script>
 function checkGrade(){
 let score= document.getElementById("score").value;
@@ -36,10 +37,8 @@ else {
 }
 document.getElementById("result").innerText=`score :${score}, grade: ${grade} ` ;
 
-
 }
 </script>  
-
 
 
 <script>
@@ -51,13 +50,7 @@ function marksFunction(){
 document.getElementById("marksResult").innerText=`marks grade ${scoreMarks}`;
 }
 
-
-
-
 </script>    
-
-
-<input type="number" id="table" placeholder="Enter score">
 
 
 <script>
@@ -77,9 +70,53 @@ while(i < 10){
     i++;
 }
 document.write(text1);
-
 </script>    
 
+<form onsubmit="return false;">
+<div>English : <input type = "number" id="sbj1"/> </div>
+<div>Math : <input type = "number" id="sbj2"/> </div>
+<div>Science : <input type = "number" id="sbj3"/> </div>
+<div>Hindi : <input type = "number" id="sbj4"/> </div>
+<div class="resultBlock">
+  <input type="number" id="m_result" />   
+<button type="button" onclick="studentFunction()" id ="btn">Result</button>
+</div>
+<div id ="marks_Result"></div>
+<div id ="marksPercentage"></div>
+
+</form>
+
+<script>
+    function studentFunction(){
+    let sbj1 = Number(document.getElementById("sbj1").value);
+    let sbj2 = Number(document.getElementById("sbj2").value);
+    let sbj3 = Number(document.getElementById("sbj3").value);
+    let sbj4 = Number(document.getElementById("sbj4").value);
+
+    let total_Marks =sbj1 + sbj2 + sbj3 + sbj4 ;
+    let totalPercent=(total_Marks / 400) * 100 ;
+
+    let m_result = Number(document.getElementById("m_result").value);
+    console.log(`${m_result}`);
+
+    switch(m_result) {
+    case 1:
+  document.getElementById("marks_Result").innerText =
+    `Total Marks = ${total_Marks}`;
+        break;
+
+    case 2:
+        document.getElementById("marksPercentage").innerText =
+            `Percentage: ${totalPercent}`;
+        break;
+
+    default:
+        document.getElementById("marks_Result").innerText =
+            "Enter 1 for Marks or 2 for Percentage";
+}
+}
+
+ </script>   
 </body>
 </html> 
 
